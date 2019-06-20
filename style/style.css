@@ -1,0 +1,1929 @@
+@import url("https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800,900");
+.noSelect, .btn {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+::-moz-selection {
+  background-color: #FFAB00;
+  color: #fff;
+}
+
+::selection {
+  background-color: #FFAB00;
+  color: #fff;
+}
+
+a {
+  color: #FFAB00;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #FFAB00;
+}
+
+.btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 10px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  color: #040301;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+  -webkit-box-shadow: 0 2px 20px rgba(4, 3, 1, 0.2);
+          box-shadow: 0 2px 20px rgba(4, 3, 1, 0.2);
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  border: none;
+}
+
+.btn:hover {
+  -webkit-box-shadow: 0 0 25px rgba(4, 3, 1, 0.2);
+          box-shadow: 0 0 25px rgba(4, 3, 1, 0.2);
+}
+
+.btn.big {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.btn.black {
+  background-color: #040301;
+  color: #FFAB00;
+  text-shadow: 0 0 0px #ffab00;
+}
+
+.btn.black:hover {
+  text-shadow: 0 0 10px #ffab00;
+}
+
+.btn.orange {
+  background-color: #FFAB00;
+  color: #040301;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn.orange:hover {
+  -webkit-box-shadow: 0 0 20px #FFAB00;
+          box-shadow: 0 0 20px #FFAB00;
+}
+
+body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  color: #040301;
+  font-family: "Muli", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body.fixed {
+  overflow: hidden;
+}
+
+.mainWrap {
+  max-width: 100%;
+  width: 1400px;
+  position: relative;
+  display: inherit;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 12;
+  background-color: #fff;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+header .navHoverGames {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  -webkit-transform: translateY(90%);
+          transform: translateY(90%);
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  pointer-events: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+header .navHoverGames.active {
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+header .navHoverGames.active .mainWrap {
+  pointer-events: auto;
+}
+
+header .navHoverGames .mainWrap {
+  pointer-events: none;
+}
+
+header .navHoverGames .mainWrap .navHoverGame {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 400px;
+  background-color: #040301;
+  text-decoration: none !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  overflow: hidden;
+}
+
+header .navHoverGames .mainWrap .navHoverGame .navHoverGameCover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: .3;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+header .navHoverGames .mainWrap .navHoverGame .navHoverGameTitle {
+  color: #FFAB00;
+  position: relative;
+  z-index: 2;
+  font-weight: 700;
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+header .navHoverGames .mainWrap .navHoverGame:hover {
+  -webkit-box-flex: 1.2;
+      -ms-flex: 1.2;
+          flex: 1.2;
+}
+
+header .navHoverGames .mainWrap .navHoverGame:hover .navHoverGameCover {
+  opacity: .5;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+header .navHoverGames .mainWrap .navHoverGame:hover .navHoverGameTitle {
+  color: #fff;
+}
+
+header.compact {
+  padding: 0;
+  -webkit-box-shadow: 0 1px 0 rgba(4, 3, 1, 0.1);
+          box-shadow: 0 1px 0 rgba(4, 3, 1, 0.1);
+}
+
+header.compact .mainWrap nav {
+  -ms-flex-item-align: normal;
+      -ms-grid-row-align: normal;
+      align-self: normal;
+}
+
+header.compact .mainWrap nav .menuItem {
+  padding: 0px 25px;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .mainWrap {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+header .mainWrap .storeModalCont {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  background: #040301;
+  max-width: 100%;
+  color: #fff;
+  width: 400px;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 2px 50px rgba(255, 255, 255, 0.2);
+          box-shadow: 0 2px 50px rgba(255, 255, 255, 0.2);
+}
+
+header .mainWrap .storeModalCont .storeModalContTitle {
+  padding: 10px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+header .mainWrap .storeModalCont .storeItems {
+  position: relative;
+  max-height: 300px;
+  overflow: auto;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 100%;
+}
+
+header .mainWrap .storeModalCont .storeItems::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+header .mainWrap .storeModalCont .storeItems .storeItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5px 0;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100%;
+  position: relative;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+header .mainWrap .storeModalCont .storeItems .storeItem:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+header .mainWrap .storeModalCont .storeItems .storeItem .storeItemThumb {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+header .mainWrap .storeModalCont .storeItems .storeItem .storeItemTitle {
+  padding: 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+header .mainWrap .storeModalCont .storeItems .storeItem .storeItemTitle span {
+  font-size: 17px;
+  font-weight: 600;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+header .mainWrap .storeModalCont .storeItems .storeItem .rock-close {
+  font-size: 17px;
+  cursor: pointer;
+  color: #FFAB00;
+}
+
+header .mainWrap .storeModalCont .storeTotal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+header .mainWrap .storeModalCont .storeTotal .storeTotalSum {
+  color: #FFAB00;
+}
+
+header .mainWrap .storeModalCont .storeBuy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+header .mainWrap .storeModalCont .storeBuy .btn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .mainWrap .mainLogoWrap {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+header .mainWrap .mainLogoWrap .mainLogo {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  background-image: url(../res/imgs/logo.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+header .mainWrap nav {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .mainWrap nav .menuItem {
+  text-decoration: none;
+  color: #040301;
+  font-weight: 700;
+  font-size: 18px;
+  opacity: .7;
+  padding: 20px 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  white-space: nowrap;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+header .mainWrap nav .menuItem:hover {
+  opacity: 1;
+}
+
+header .mainWrap nav .menuItem.active {
+  opacity: 1;
+}
+
+header .mainWrap nav .selectedMenuBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 50px;
+  background-color: #FFAB00;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+header .mainWrap .userPanel {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header .mainWrap .userPanel .mobileMenuTogg {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header .mainWrap .userPanel .userWrap {
+  position: relative;
+  padding: 10px 0 10px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header .mainWrap .userPanel .userWrap:hover .userMenuWrap {
+  opacity: 1;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  pointer-events: auto;
+}
+
+header .mainWrap .userPanel .userWrap .userAvatar {
+  width: 50px;
+  height: 50px;
+  background-image: url(../res/imgs/defaultAvt.jpg);
+  background-size: cover;
+  background-position: center;
+  -webkit-box-shadow: inset 0 0 0 3px #040301;
+          box-shadow: inset 0 0 0 3px #040301;
+  border-radius: 8px;
+}
+
+header .mainWrap .userPanel .userWrap .userMenuWrap {
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+  -webkit-transform: translateY(80%);
+          transform: translateY(80%);
+  width: 200px;
+  -webkit-box-shadow: 0 2px 20px rgba(4, 3, 1, 0.2);
+          box-shadow: 0 2px 20px rgba(4, 3, 1, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+header .mainWrap .userPanel .userWrap .userMenuWrap .userMenuTitle {
+  font-size: 17px;
+  font-weight: 700;
+  color: #040301;
+  padding: 5px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header .mainWrap .userPanel .userWrap .userMenuWrap .userMenuItem {
+  padding: 10px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header .mainWrap .userPanel .shopPanel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+header .mainWrap .userPanel .shopPanel[do] {
+  cursor: pointer;
+}
+
+header .mainWrap .userPanel .shopPanel .shopPanelIconWrap {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .mainWrap .userPanel .shopPanel .shopPanelIconWrap .shopPanelCounter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2px 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #040301;
+  color: #FFAB00;
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: 4px;
+  pointer-events: none;
+  -webkit-transform: translateY(-100%) translateX(50%);
+          transform: translateY(-100%) translateX(50%);
+}
+
+body[data-page="loginpage"] {
+  color: #fff;
+  background-color: #040301;
+  background-image: url(../res/imgs/bgPattern.png);
+  background-size: 200px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+body[data-page="loginpage"] .loginForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body[data-page="loginpage"] .loginForm .loginFormInputGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body[data-page="loginpage"] .loginForm .loginFormInputGroup label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+body[data-page="loginpage"] .loginForm .loginFormInputGroup input {
+  border: 0;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: rgba(4, 3, 1, 0.3);
+  border-radius: 8px;
+  border: 2px solid #FFAB00;
+  color: #FFAB00;
+  font-family: "Muli", sans-serif;
+}
+
+body[data-page="loginpage"] .loginForm .loginFormInputGroup input[type=submit] {
+  cursor: pointer;
+  background-color: #FFAB00;
+  color: #040301;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.mainPageVideos {
+  position: relative;
+  width: 100%;
+  background-color: #040301;
+  color: #fff;
+  background-image: url(../res/imgs/bgPattern.png);
+  background-size: 200px auto;
+  background-attachment: fixed;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mainPageVideos .mpvArea {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 40px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mainPageVideos .mpvArea .videoItemCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin: 0 80px;
+  width: 900px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.mainPageVideos .mpvArea .videoItemCont:nth-of-type(1), .mainPageVideos .mpvArea .videoItemCont:nth-of-type(3) {
+  opacity: .5;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  cursor: pointer;
+}
+
+.mainPageVideos .mpvArea .videoItemCont:nth-of-type(1) *, .mainPageVideos .mpvArea .videoItemCont:nth-of-type(3) * {
+  pointer-events: none;
+}
+
+.mainPageVideos .mpvArea .videoItemCont:nth-of-type(1):hover, .mainPageVideos .mpvArea .videoItemCont:nth-of-type(3):hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  opacity: .8;
+}
+
+.mainPageVideos .mpvArea .videoItemCont .videoItemWrap {
+  position: relative;
+  height: 506px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.mainPageVideos .mpvArea .videoItemCont .videoItemWrap:hover .videoThumb {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.mainPageVideos .mpvArea .videoItemCont .videoItemWrap .videoThumb {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.mainPageVideos .mpvArea .videoItemCont .videoItemWrap .videoThumb:hover ~ i {
+  -webkit-transform: translate(-50%, -50%) scale(1.5);
+          transform: translate(-50%, -50%) scale(1.5);
+  color: #FFAB00;
+  text-shadow: 0 2px 20px rgba(4, 3, 1, 0.5);
+}
+
+.mainPageVideos .mpvArea .videoItemCont .videoItemWrap i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translate(-50%, -50%) scale(2);
+          transform: translate(-50%, -50%) scale(2);
+  font-size: 32px;
+  pointer-events: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.mainPageVideos .mpvArea .videoItemCont .videoDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.mainPageVideos .mpvArea .videoItemCont .videoDetails .videoTitle {
+  font-size: 25px;
+  font-weight: 700;
+  padding: 5px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.mainPageVideos .mpvArea .videoItemCont .videoDetails .videoDate {
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFAB00;
+}
+
+.mainPageVideos .mpvArea .videoItemCont .videoDetails .videoDescription {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 5px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.anim-in-featuredVideo {
+  -webkit-animation-name: animInFeaturedVideo;
+          animation-name: animInFeaturedVideo;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+}
+
+.anim-in-featuredVideo-sec {
+  -webkit-animation-name: animInFeaturedVideoSec;
+          animation-name: animInFeaturedVideoSec;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+}
+
+.anim-out-featuredVideo {
+  -webkit-animation-name: animOutFeaturedVideo;
+          animation-name: animOutFeaturedVideo;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+}
+
+.anim-out-featuredVideo-sec {
+  -webkit-animation-name: animOutFeaturedVideoSec;
+          animation-name: animOutFeaturedVideoSec;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+}
+
+@-webkit-keyframes animInFeaturedVideo {
+  0% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes animInFeaturedVideo {
+  0% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes animInFeaturedVideoSec {
+  0% {
+    -webkit-transform: scale(0.9) translateX(50px);
+            transform: scale(0.9) translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(0.9) translateX(0px);
+            transform: scale(0.9) translateX(0px);
+    opacity: .5;
+  }
+}
+
+@keyframes animInFeaturedVideoSec {
+  0% {
+    -webkit-transform: scale(0.9) translateX(50px);
+            transform: scale(0.9) translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(0.9) translateX(0px);
+            transform: scale(0.9) translateX(0px);
+    opacity: .5;
+  }
+}
+
+@-webkit-keyframes animOutFeaturedVideo {
+  0% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes animOutFeaturedVideo {
+  0% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes animOutFeaturedVideoSec {
+  0% {
+    -webkit-transform: scale(0.9) translateX(-50px);
+            transform: scale(0.9) translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(0.9) translateX(0px);
+            transform: scale(0.9) translateX(0px);
+    opacity: .5;
+  }
+}
+
+@keyframes animOutFeaturedVideoSec {
+  0% {
+    -webkit-transform: scale(0.9) translateX(-50px);
+            transform: scale(0.9) translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(0.9) translateX(0px);
+            transform: scale(0.9) translateX(0px);
+    opacity: .5;
+  }
+}
+
+.mainPageArticles {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  padding: 80px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-image: url(../res/imgs/bgPatternLight.png);
+  background-size: 200px auto;
+  background-attachment: fixed;
+}
+
+.mainPageArticles .mainWrap {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mainPageArticles .mainWrap article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 30px rgba(4, 3, 1, 0.3);
+          box-shadow: 0 2px 30px rgba(4, 3, 1, 0.3);
+}
+
+.mainPageArticles .mainWrap article:not(:last-of-type) {
+  margin-bottom: 50px;
+}
+
+.mainPageArticles .mainWrap article .mpArticleCover {
+  position: relative;
+  z-index: 2;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../res/imgs/bgPattern.png);
+  border-radius: 10px;
+  width: 350px;
+  min-height: 400px;
+}
+
+.mainPageArticles .mainWrap article .mpArticleText {
+  position: relative;
+  z-index: 2;
+  padding-left: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mainPageArticles .mainWrap article .mpArticleText .mpArticleTitle {
+  font-size: 40px;
+  font-weight: 900;
+  color: #040301;
+  padding-bottom: 10px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.mainPageArticles .mainWrap article .mpArticleText .mpArticleContent {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 600;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 30px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.mainPageArticles .mainWrap article .mpArticleText .mpArticleDate {
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFAB00;
+}
+
+footer {
+  position: relative;
+  background-color: #040301;
+  padding: 50px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .mainWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .mainWrap .footerLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .mainWrap .footerLinks .footerLink {
+  color: #fff;
+  opacity: .4;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+  margin: 0 10px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+footer .mainWrap .footerLinks .footerLink:hover {
+  opacity: .9;
+}
+
+footer .mainWrap .footerSocialLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .mainWrap .footerSocialLinks i {
+  font-size: 25px;
+  margin: 0 20px;
+  color: #FFAB00;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+footer .mainWrap .footerSocialLinks i:hover {
+  color: #fff;
+}
+
+footer .mainWrap .footerLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+
+footer .mainWrap .footerLogo i {
+  font-size: 30px;
+}
+
+footer .mainWrap .footerCopyright {
+  text-align: center;
+}
+
+footer .mainWrap .footerCopyright .footerCr {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+footer .mainWrap .footerCopyright .footerMotto {
+  font-size: 14px;
+  font-weight: 600;
+  opacity: .3;
+}
+
+.pageCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+body[data-page="gamespage"] .navHoverGames {
+  display: none;
+}
+
+.gamesCont {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.gamesCont .mainWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.gamesCont .mainWrap .gameItemCont {
+  width: 25%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding: 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.gamesCont .mainWrap .gameItemCont:hover .gameCoverCont .gameCover {
+  -webkit-box-shadow: 0 0 0 3px rgba(102, 68, 0, 0.2), 0 5px 30px rgba(4, 3, 1, 0.3);
+          box-shadow: 0 0 0 3px rgba(102, 68, 0, 0.2), 0 5px 30px rgba(4, 3, 1, 0.3);
+}
+
+.gamesCont .mainWrap .gameItemCont .gameCoverCont {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  margin-bottom: 10px;
+}
+
+.gamesCont .mainWrap .gameItemCont .gameCoverCont .gameCover {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 0 0 0 3px rgba(102, 68, 0, 0.2);
+          box-shadow: 0 0 0 3px rgba(102, 68, 0, 0.2);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+  overflow: hidden;
+}
+
+.gamesCont .mainWrap .gameItemCont .gameTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #040301;
+  padding: 5px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.gamesCont .mainWrap .gameItemCont .gameBuy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gamesCont .mainWrap .gameItemCont .gameBuy .gamePrice {
+  font-size: 20px;
+  line-height: 18px;
+  font-weight: 900;
+  color: #040301;
+  margin-right: 10px;
+}
+
+.gamesCont .mainWrap .gameItemCont .gameBuy .gameBuyBtn {
+  padding: 5px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #FFAB00;
+  color: #040301;
+  font-weight: 700;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.gamesCont .mainWrap .gameItemCont .gameBuy .gameBuyBtn:hover {
+  background-color: #040301;
+  color: #FFAB00;
+}
+
+.videoPageCont {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.videoPageCont .mainWrap {
+  position: relative;
+}
+
+.videoPageCont .mainWrap .mainVideoWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.videoPageCont .mainWrap .mainVideoWrap .mainVideo {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-bottom: 10px;
+}
+
+.videoPageCont .mainWrap .mainVideoWrap .mainVideo video {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.videoPageCont .mainWrap .mainVideoWrap .mainVideoTitle {
+  font-size: 25px;
+  font-weight: 900;
+  color: #040301;
+  padding: 5px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.videoPageCont .mainWrap .mainVideoWrap .mainVideoDate {
+  font-size: 17px;
+  font-weight: 700;
+  color: #FFAB00;
+}
+
+.videoPageCont .mainWrap .mainVideoWrap .mainVideoDescription {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 25px;
+  padding: 10px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.videoPageCont .mainWrap .videosList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+  margin-left: 40px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.videoPageCont .mainWrap .videosList a {
+  position: relative;
+  text-decoration: none;
+}
+
+.videoPageCont .mainWrap .videosList a .videoItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.videoPageCont .mainWrap .videosList a .videoItem .videoItemThumb {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: inset 0 0 0 3px #040301;
+          box-shadow: inset 0 0 0 3px #040301;
+}
+
+.videoPageCont .mainWrap .videosList a .videoItem .videoItemThumb i {
+  font-size: 17px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.videoPageCont .mainWrap .videosList a .videoItem .videoItemThumb:hover i {
+  font-size: 25px;
+  color: #fff;
+}
+
+.videoPageCont .mainWrap .videosList a .videoItem .videoItemTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #040301;
+  padding: 5px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none !important;
+}
+
+.mouthoffPageCont {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.mouthoffPageCont .mainWrap {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mouthoffPageCont .mainWrap .mouthoffPageTitle {
+  font-size: 30px;
+  font-weight: 900;
+  color: #040301;
+  margin-bottom: 30px;
+}
+
+.mouthoffPageCont .mainWrap .mouthoffForm {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mouthoffPageCont .mainWrap .mouthoffForm .formSubmit {
+  margin-top: 20px;
+}
+
+.mouthoffPageCont .mainWrap .mouthoffForm .formGroup {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.mouthoffPageCont .mainWrap .mouthoffForm .formGroup .formError {
+  margin: 5px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #FFAB00;
+  color: #040301;
+  font-size: 18px;
+  font-weight: 700;
+  border: 3px solid #040301;
+  border-radius: 5px;
+}
+
+.mouthoffPageCont .mainWrap .mouthoffForm .formGroup .formInputTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #040301;
+  margin-bottom: 15px;
+}
+
+.mouthoffPageCont .mainWrap .mouthoffForm .formGroup textarea, .mouthoffPageCont .mainWrap .mouthoffForm .formGroup input[type="text"] {
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  border: 3px solid #040301;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 500px;
+  max-width: 100%;
+  font-family: "Muli", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 22px;
+  outline: none;
+}
+
+.mouthoffPageCont .mainWrap .mouthoffForm .formGroup textarea:focus, .mouthoffPageCont .mainWrap .mouthoffForm .formGroup input[type="text"]:focus {
+  border-color: #FFAB00;
+}
+
+.mouthoffPageCont .mainWrap .mouthoffForm .formGroup textarea {
+  resize: vertical;
+  min-height: 300px;
+  width: 100%;
+}
+
+.mouthoffPageCont .mainWrap .mouthoffForm .formGroup.hidden {
+  display: none;
+}
+
+.mouthoffPageCont .mainWrap .mouthoffForm .formGroup .checkboxWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.mouthoffPageCont .mainWrap .mouthoffForm .formGroup .checkboxWrap:hover .fakeCheckbox {
+  background-color: rgba(4, 3, 1, 0.1);
+}
+
+.mouthoffPageCont .mainWrap .mouthoffForm .formGroup .checkboxWrap .fakeCheckbox {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 3px solid #040301;
+}
+
+.mouthoffPageCont .mainWrap .mouthoffForm .formGroup .checkboxWrap .checkboxLabel {
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.mouthoffPageCont .mainWrap .mouthoffForm .formGroup .checkboxWrap input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.mouthoffPageCont .mainWrap .mouthoffForm .formGroup .checkboxWrap input[type="checkbox"]:checked ~ .fakeCheckbox {
+  background-color: #FFAB00;
+  background-image: url(../res/imgs/star.svg);
+  background-size: 70% 70%;
+  background-position: 60% center;
+  background-repeat: no-repeat;
+}
+
+.mouthoffPageCont .mainWrap .mouthoffForm .formGroup .formReactions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  background-image: url(../res/imgs/bgPatternLight.png);
+  background-size: 150px auto;
+  border-radius: 10px;
+}
+
+.mouthoffPageCont .mainWrap .mouthoffForm .formGroup .formReactions .reactionCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.mouthoffPageCont .mainWrap .mouthoffForm .formGroup .formReactions .reactionCont:hover .reactionIcon {
+  background-color: #FFAB00;
+}
+
+.mouthoffPageCont .mainWrap .mouthoffForm .formGroup .formReactions .reactionCont .reactionName {
+  font-size: 18px;
+  font-weight: 700;
+  color: #040301;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.mouthoffPageCont .mainWrap .mouthoffForm .formGroup .formReactions .reactionCont .reactionIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #fff;
+  background-size: 80% 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 0 0 0 2px #040301;
+          box-shadow: 0 0 0 2px #040301;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.mouthoffPageCont .mainWrap .mouthoffForm .formGroup .formReactions .reactionCont input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.mouthoffPageCont .mainWrap .mouthoffForm .formGroup .formReactions .reactionCont input[type="radio"]:checked ~ .reactionIcon {
+  background-color: #FFAB00;
+}
+
+.mouthoffShowMessageOverlay {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(4, 3, 1, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.mouthoffShowMessageOverlay .mouthoffShowMessageCont {
+  width: 500px;
+  max-width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-shadow: 0 2px 20px rgba(4, 3, 1, 0.9);
+          box-shadow: 0 2px 20px rgba(4, 3, 1, 0.9);
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mouthoffShowMessageOverlay .mouthoffShowMessageCont .mouthoffMessageReactionCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  background-image: url(../res/imgs/bgPatternLight.png);
+  background-size: 150px auto;
+  border: 2px solid rgba(4, 3, 1, 0.05);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mouthoffShowMessageOverlay .mouthoffShowMessageCont .mouthoffMessageReactionCont .mouthoffMessageReaction {
+  width: 50px;
+  height: 50px;
+  background-size: 80% 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  border-radius: 100%;
+  border: 3px solid #040301;
+}
+
+.mouthoffShowMessageOverlay .mouthoffShowMessageCont .mouthoffMessageReactionCont .mouthoffMessageTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #040301;
+  margin-top: 10px;
+}
+
+.mouthoffShowMessageOverlay .mouthoffShowMessageCont .mouthoffMessageContent {
+  padding: 20px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 23px;
+  text-align: center;
+}
+
+.mouthoffShowMessageOverlay .mouthoffShowMessageCont .mouthoffMessageEmail {
+  background-color: #FFAB00;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  border: 3px solid #040301;
+}
+
+.mobileMenuCont {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(4, 3, 1, 0.95);
+  z-index: 15;
+  overflow: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 100px 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.mobileMenuCont .mobileMenuItems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mobileMenuCont .mobileMenuItems .mobileMenuItem {
+  text-decoration: none;
+  font-size: 2em;
+  color: #FFAB00;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mobileMenuCont .mobileMenuItems .mobileMenuItem:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .mainWrap {
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .mainPageVideos .mpvArea .videoItemCont {
+    width: 500px;
+    margin: 0 30px;
+  }
+  .mainPageVideos .mpvArea .videoItemCont .videoItemWrap {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .gamesCont .mainWrap .gameItemCont {
+    width: calc(100% / 3);
+  }
+  .mainPageArticles .mainWrap {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .mainPageArticles .mainWrap article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 80%;
+  }
+  .mainPageArticles .mainWrap article .mpArticleCover {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .mainPageArticles .mainWrap article .mpArticleText {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .gamesCont .mainWrap .gameItemCont {
+    width: 50%;
+  }
+  header .mainWrap[headerWrap] nav {
+    display: none;
+  }
+  header .mobileMenuTogg {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  .videoPageCont .mainWrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .videoPageCont .mainWrap .mainVideoWrap {
+    margin-bottom: 20px;
+  }
+  .videoPageCont .mainWrap .videosList {
+    margin: 0;
+    width: 100%;
+  }
+  .videoPageCont .mainWrap .videosList a .videoItem .videoItemThumb {
+    height: 200px;
+  }
+  .navHoverGames {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .mainPageArticles .mainWrap {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .mainPageArticles .mainWrap article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .mainPageArticles .mainWrap article .mpArticleCover {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .gamesCont .mainWrap .gameItemCont {
+    width: 100%;
+  }
+  .mainPageArticles {
+    background-image: none;
+  }
+  .mainPageArticles .mainWrap {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .mainPageArticles .mainWrap article {
+    padding: 5px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .mainPageVideos .mpvArea .videoItemCont {
+    width: 300px;
+    margin: 0 30px;
+  }
+  .mainPageVideos .mpvArea .videoItemCont .videoItemWrap {
+    height: 150px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
